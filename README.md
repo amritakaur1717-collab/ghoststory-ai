@@ -24,3 +24,8 @@ This is a beginner project that currently uses predefined story templates. It is
 
 ## 📄 License
 Created as a learning project.
+
+## 🌐 Live Demo
+
+Try GhostStory AI here:
+https://amritakaur1717-collab.github.io/ghoststory-ai/
