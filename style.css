@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 18px;
+    font-family: Georgia, serif;
+    color: #d8fbd5;
+    background:
+        radial-gradient(ellipse at 75% 12%, #b8ff9b 0%, #526d55 3%, transparent 12%),
+        radial-gradient(ellipse at 15% 75%, #173f36 0%, transparent 35%),
+        radial-gradient(ellipse at 85% 85%, #092e39 0%, transparent 40%),
+        linear-gradient(180deg, #050b18, #101c2c 48%, #020806);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Haunted forest silhouettes */
+body::before {
+    content: "♠  ♣  ♠  ♣  ♠  ♣  ♠";
+    position: fixed;
+    bottom: -30px;
+    left: -20px;
+    width: 120%;
+    font-size: clamp(70px, 14vw, 150px);
+    letter-spacing: 8px;
+    color: #020b0a;
+    opacity: 0.9;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Toxic green ghost fog */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 75%, #5aff7820, transparent 30%),
+        radial-gradient(ellipse at 80% 60%, #43ffb322, transparent 35%),
+        radial-gradient(ellipse at 50% 100%, #80ff5c1c, transparent 40%);
+    filter: blur(18px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 65px auto 20px;
+    padding: 32px;
+    position: relative;
+    background: linear-gradient(145deg, #071710ed, #081a2aeb);
+    border: 1px solid #7dff7870;
+    border-radius: 16px;
+    box-shadow:
+        0 0 25px #39ff7020,
+        0 0 80px #00ff9d12,
+        inset 0 0 30px #63ff6b0b;
+}
+
+/* Spooky decorations */
+.container::before {
+    content: "🌕";
+    position: absolute;
+    top: -82px;
+    right: 15px;
+    font-size: 65px;
+    filter: drop-shadow(0 0 18px #b8ff8b);
+}
+
+.container::after {
+    content: "🎃   🏚️   🎃";
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 30px;
+    filter: drop-shadow(0 0 10px #78ff43);
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 48px);
+    color: #b6ff88;
+    text-shadow:
+        0 0 8px #70ff54,
+        0 0 25px #32ff6a66;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #9cc6c4;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+textarea,
+select {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+    background: #020b12;
+    color: #d8ffd2;
+    border: 1px solid #477d63;
+    border-radius: 8px;
+    font: 16px Georgia, serif;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #8cff71;
+    box-shadow: 0 0 15px #42ff6530;
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+    background: linear-gradient(100deg, #183d28, #367c35, #173d45);
+    color: #e2ffcb;
+    border: 1px solid #91ff71;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 18px #43ff5220;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #326a39;
+    box-shadow: 0 0 28px #71ff59a0;
+    transform: translateY(-2px);
+}
+
+#result {
+    min-height: 90px;
+    margin-top: 22px;
+    padding: 20px;
+    color: #c6edcb;
+    background: #020a10;
+    border-left: 3px solid #8aff6a;
+    border-radius: 5px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+::placeholder {
+    color: #66877c;
+}
